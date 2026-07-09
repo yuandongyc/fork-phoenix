@@ -1,4 +1,4 @@
-name: Build Phoenix image (tarball)
+name: docker-build-fork
 
 # Builds the Phoenix Docker image from this fork's source on GitHub-hosted
 # runners (unrestricted network), saves it to a tarball, and uploads it as a
