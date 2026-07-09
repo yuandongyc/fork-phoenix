@@ -1,8 +1,10 @@
 services:
   phoenix:
-    build:
-      dockerfile: ./Dockerfile
-      context: .
+    # Prebuilt image produced by .github/workflows/docker-build-fork.yml and
+    # pushed to GHCR. Pull it in mainland China directly, or via the NJU mirror:
+    #   docker pull ghcr.nju.edu.cn/yuandongyc/fork-phoenix:latest
+    #   docker tag ghcr.nju.edu.cn/yuandongyc/fork-phoenix:latest ghcr.io/yuandongyc/fork-phoenix:latest
+    image: ghcr.io/yuandongyc/fork-phoenix:latest
     depends_on:
       - db
     ports:
